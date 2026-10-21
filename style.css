@@ -22,7 +22,7 @@ h2 {
     font-weight: 400;
     font-style: normal;
     font-size: clamp(1.5rem, 3vw, 3rem);
-    background-image: url("/images/aristocrat_mole.png");
+    background-image: url("./images/aristocrat_mole.png");
     background-color: black;
     background-repeat: no-repeat;
     background-size: auto 200%;      /* scales with the box instead of a fixed 1000px */
