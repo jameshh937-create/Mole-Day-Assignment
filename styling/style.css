@@ -1,7 +1,12 @@
+html {
+    /* 16px on phones, grows with screen width, caps at 64px on giant displays */
+    font-size: clamp(16px, 0.9vw + 8px, 64px);
+}
+
 body, html {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
+    margin: 0;
+    padding: 0;
+    border: 0;
     background-color: #8b693f;
     width: 100%;
 }
@@ -9,84 +14,111 @@ body, html {
 h2 {
     color: white;
     text-align: center;
+    font-size: 2rem;
 }
 
-.title {  
+.title {
     font-family: "Marck Script", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 40px;
+    font-size: clamp(1.5rem, 3vw, 3rem);
     background-image: url("/images/aristocrat_mole.png");
     background-color: black;
     background-repeat: no-repeat;
-    background-size: 1000px;
-    background-position: 50% -5%;
+    background-size: auto 100%;      /* scales with the box instead of a fixed 1000px */
+    background-position: center;
     color: white;
     text-align: right;
-    height: 500px;
-    padding: 10px;
-    padding-right:100px;
+    height: 40vh;                    /* tied to screen height, not 500px */
+    min-height: 20rem;
+    padding: 1rem 5vw 1rem 1rem;
+    box-sizing: border-box;
 }
 
 .header {
     background-color: darkgray;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
     display: flow-root;
 }
 
 .history {
     background-color: rgb(243, 211, 147);
     width: 100%;
-    padding-bottom:20px;
+    padding-bottom: 1.5rem;
 }
 
 .scientific-significance {
     background-color: rgb(1, 27, 52);
-    padding-bottom: 20px;
+    padding-bottom: 1.5rem;
+}
+
+/* Cap content width so lines don't stretch across a 6 ft wall */
+.intro,
+.field1, .field2, .field3, .field4 {
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .intro {
     text-align: center;
     background-color: white;
     color: black;
-    padding: 5px;
-    border-radius: 20px;
-    width: 80%;
-    margin: 30px auto;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    width: 90%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
-    font-size: 40px;
+    font-size: clamp(1.2rem, 2.5vw, 2.5rem);
 }
 
 .field1, .field2, .field3, .field4 {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  color: black;
-  background-color: white;
-  margin: 30px;
-  margin-top: 50px;
-  border-radius: 20px;
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-size: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    color: black;
+    background-color: white;
+    width: 90%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 1.5rem;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: clamp(1.1rem, 2vw, 2.25rem);
 }
 
 .further-reading {
-  background-color: white;
-  padding: 0px;
+    background-color: white;
+    padding: 0;
+    font-size: 1.25rem;
+    text-align: center;
 }
 
 .image {
-  max-width: 50%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
+    width: 100%;           /* fill the column instead of 50% of it */
+    height: auto;
+    display: block;
+    border-radius: 0.75rem;
 }
 
 .box {
-  padding: 20px;
-  color: black;
-  min-width: 0; /* lets flex children shrink instead of overflowing */
-  border-radius: 20px;
+    padding: 1.25rem;
+    color: black;
+    min-width: 0;
+    border-radius: 1.5rem;
+}
+
+/* Phones and narrow windows: stack image above text */
+@media (max-width: 700px) {
+    .field1, .field2, .field3, .field4 {
+        grid-template-columns: 1fr;
+    }
+    .title {
+        padding-right: 1rem;
+        text-align: center;
+    }
 }
