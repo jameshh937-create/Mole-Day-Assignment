@@ -16,14 +16,16 @@ h2 {
     font-weight: 400;
     font-style: normal;
     font-size: 40px;
-    background-image: url("/images/fancy_mole.jpeg");
+    background-image: url("/images/aristocrat_mole.png");
+    background-color: black;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 72% 15%;
+    background-size: 1000px;
+    background-position: 50% -5%;
     color: white;
     text-align: right;
-    height: 300px;
+    height: 500px;
     padding: 10px;
+    padding-right:100px;
 }
 
 .header {
@@ -49,9 +51,12 @@ h2 {
     background-color: white;
     color: black;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 80%;
     margin: 30px auto;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 40px;
 }
 
 .field1, .field2, .field3, .field4 {
@@ -59,11 +64,12 @@ h2 {
   grid-template-columns: 1fr 2fr;
   color: black;
   background-color: white;
-  margin: 20px;
+  margin: 30px;
+  margin-top: 50px;
   border-radius: 20px;
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .further-reading {
