@@ -2,7 +2,7 @@ body, html {
     margin: 0px;
     padding: 0px;
     border: 0px;
-    background-color: #000;
+    background-color: #8b693f;
     width: 100%;
 }
 
@@ -11,7 +11,11 @@ h2 {
     text-align: center;
 }
 
-.title {
+.title {  
+    font-family: "Marck Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
     background-image: url("/images/fancy_mole.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,6 +61,9 @@ h2 {
   background-color: white;
   margin: 20px;
   border-radius: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
 }
 
 .further-reading {
