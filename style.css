@@ -25,8 +25,8 @@ h2 {
     background-image: url("/images/aristocrat_mole.png");
     background-color: black;
     background-repeat: no-repeat;
-    background-size: auto 100%;      /* scales with the box instead of a fixed 1000px */
-    background-position: center;
+    background-size: auto 200%;      /* scales with the box instead of a fixed 1000px */
+    background-position: 50% 0%;
     color: white;
     text-align: right;
     height: 40vh;                    /* tied to screen height, not 500px */
